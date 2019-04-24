@@ -1,0 +1,12 @@
+{%extends 'layout.html'%}
+{%block body%}
+<style>
+    h1 small{
+        color: aliceblue;
+    }
+    h1 {color:white;}
+</style>
+
+<h1 class="display-4">Welcome <small>{{session.username}}</small></h1>
+
+{%endblock%}

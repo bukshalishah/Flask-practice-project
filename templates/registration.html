@@ -1,0 +1,81 @@
+{%extends "layout.html"%}
+{%block body%}
+
+    <!-- CSS -->
+<style type="text/css">
+
+    #ui{background-color: #4a4b54;
+        padding: 30px;
+        margin: 30px;
+        margin-top: 50px;
+        border-radius: 20px;
+        opacity: 0.9;
+    }
+    #ui label,h1{
+        color: #fff;
+        
+    }
+
+
+</style>
+                                                      <!-- REGISTRAION FORM -->
+<div class="row">
+    <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+                <div id="ui">
+                    <h1 class="text-center display-5">Registration Form</h1>
+                        {%from 'includes/_formhelpers.html' import render_field%}
+
+                            <form class="form-group text-center" method="POST">
+                                <div class="row">
+                                </div>
+                                
+                                <!-- FULL NAME -->
+                                <div class="form-group">
+                                     {{render_field(form.name , class_="form-control", placeholder='Write Full Name')}}
+                                </div>
+
+                                <!-- USERNAME -->
+                                <div class="form-group">
+                                    {{render_field(form.username , class_="form-control", placeholder="For example: JohnDoe")}}
+                                </div>
+
+                                <!-- EMAIL -->
+                                <div class="form-group">
+                                    {{render_field(form.email , class_="form-control", placeholder="For example: johnDoe@xyz.com")}}
+                                </div>
+
+                            <div class="row">
+
+                                <!-- PASSWORD -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        {{render_field(form.password , class_="form-control", placeholder="Enter Password")}}
+                                    </div>
+                                </div>
+
+                                <!-- CONFIRM PASSWORD -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        {{render_field(form.confirm , class_="form-control", placeholder="Confirm Password")}}
+                                    </div>
+                                </div>   
+
+                            </div>
+                             
+                        <select class="form-control">
+                            <option>Choose Gender..</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                        <br>
+                            <!-- REGISTER BUTTON -->
+                            <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg">Register</button>
+                        </form>
+                    </div>
+                </div>
+            <div class="col-lg-3"></div>
+        </div>
+                                                        <!-- FORM END -->
+{%endblock%}

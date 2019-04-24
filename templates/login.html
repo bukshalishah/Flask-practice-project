@@ -1,0 +1,45 @@
+{%extends 'layout.html'%}
+{%block body%}
+<!-- CSS -->
+<style>
+    #h1{
+        color: aliceblue;
+    }
+
+    form {background-color: #4a4b54;
+        padding: 30px;
+        margin: 30px;
+        margin-top: 50px;
+        border-radius: 20px;
+        opacity: 0.9;
+        }
+    form label{color: aliceblue;}
+</style>
+<!-- LOGIN PAGE -->
+    <h1 class="display-1 text-center" id="h1">Login Page</h1>
+    <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+
+            <form class="form-group text-center" method="POST">
+
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" placeholder="Username" name="username" class="form-control" value="{{request.form[username]}}">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Password" name="password" class="form-control" value="{{request.form[password]}}">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    
+            </form>
+
+        </div>
+    <div class="col-lg-3"></div>
+</div>
+
+
+{%endblock%}

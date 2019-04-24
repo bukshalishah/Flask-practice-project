@@ -1,0 +1,44 @@
+{%extends 'layout.html'%}
+{%block body%}
+
+<style>
+    #coll {background-color: blue;
+    border: blue;
+}
+
+#box{
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    opacity: 0.9;
+
+}
+h1{
+    color: white;
+    box-shadow: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+</style>
+<div>
+<h1 class=" display-4">Skills</h1>
+</div>
+<br><br><br>
+
+<div class="row">
+
+        <div class="list-group">
+                <a href="/skills/web_designing" class="list-group-item list-group-item-action">Web Designing<span class="badge badge-secondary badge-pill">3</span></a>
+                <a href="/skills/web_development" class="list-group-item list-group-item-action">Web Development<span class="badge badge-secondary badge-pill">3</span></a>
+                <a href="/skills/artificial_intelligence" class="list-group-item list-group-item-action">Artificial Intelligence (AI)<span class="badge badge-secondary badge-pill">12</span></a>
+                <a href="/skills/graphics_designing" class="list-group-item list-group-item-action">Graphics Designing<span class="badge badge-secondary badge-pill">3</span></a>
+              </div>
+    </div>
+    <div class="col-lg-6"></div>
+    <div class="col-lg-3"></div>
+
+</div>
+
+
+{%endblock%}

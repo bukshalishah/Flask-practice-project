@@ -1,0 +1,45 @@
+{%extends 'layout.html'%}
+{%block body%}
+
+<style>
+    #coll {background-color: blue;
+    border: blue;
+}
+
+#box{
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    opacity: 0.9;
+
+}
+
+h1{
+    color: white;
+    box-shadow: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+</style>
+
+<div class="text-center">
+    <div>
+        <h1 class="text-center display-4">Web Development Skills</h1>
+    </div>
+
+    <div class="row">
+            <div class="col-lg-5" id="box">Python</div>
+            <div class="col-lg-5" id="box">Flask</div>
+    </div>
+
+    <div class="row">
+            <div class="col-lg-3" id=""></div>
+            <div class="col-lg-5 " id="box">jinja 2</div>
+            <div class="col-lg-3" id=""></div>
+    </div>
+</div>
+
+
+
+{%endblock%}
